@@ -1,0 +1,9 @@
+[package]
+name = "rmap"
+description = "A simple C-friendly wrapper around the Rust stdlib HashMap to allow safe, fault-tolerant storage"
+version = "0.1.0"
+authors = ["Katharina Fey <kookie@spacekookie.de>"]
+
+[lib]
+name = "rmap"
+crate-type = ["dylib"]
