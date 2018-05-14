@@ -11,14 +11,12 @@ int main(int argn, char **argv)
 {
     printf("Welcome to the   R U S T   M A P   T E S T\n");
 
-    struct rmap_ctx *ctx;
-    rmap_create(&ctx);
-
+    struct rmap_ctx *ctx = rmap_create();
     printf("rmap address: %d\n", (int) ctx);
 
     printf("About to insert...\n");
-    rmap_insert(ctx);
+    rmap_insert(&ctx, "Some key", 42);
 
-    rmap_test(ctx);
+    printf("Value is: %d", rmap_get(&ctx, "Some key"));
     return 0;
 }
